@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class Interactor: InteractorInput, NewsDataStore, NewsBuisnessLogic {
+final class Interactor: NewsDataStore, NewsBuisnessLogic {
     // MARK: - Properties
     weak var output: InteractorOutput!
     var worker: ArticleWorkerInput!
@@ -21,10 +21,26 @@ final class Interactor: InteractorInput, NewsDataStore, NewsBuisnessLogic {
     
     // MARK: - Functions
     func loadFreshNews() {
-        
+        worker.getNews { [weak self] articles in
+            self?.articles = articles
+        }
     }
     
     func loadMoreNews() {
-        
+        worker.getMoreNews { [weak self] articles in
+            self?.articles += articles
+        }
+    }
+    
+    func getArticleURL(indexPath: IndexPath) -> URL? {
+        return articles[indexPath.row].articleUrl
+    }
+    
+    func getArticleCount() -> Int {
+        return articles.count
+    }
+    
+    func getArticleElem(row: Int) -> ArticleModel {
+        return articles[row]
     }
 }

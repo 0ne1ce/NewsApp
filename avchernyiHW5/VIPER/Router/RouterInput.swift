@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
+// MARK: - RouterInput
 protocol RouterInput: AnyObject {
     // MARK: - Functions
-    func alertExample()
+    func showNewScreen(url: URL?)
 }

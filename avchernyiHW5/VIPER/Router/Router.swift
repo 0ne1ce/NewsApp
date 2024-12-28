@@ -8,17 +8,15 @@
 import Foundation
 import UIKit
 
+// MARK: - Router
 final class Router: RouterInput {
     // MARK: - Properties
     weak var view : UIViewController!
     
     // MARK: - Functions
-    func alertExample() {
-        let alert = UIAlertController(title: "Hi", message: nil, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
-        alert.addAction(okButton)
-        
-        view.present(alert, animated: true, completion: nil) // Вместо alert - переход на другой модуль
+    func showNewScreen(url: URL?) {
+        let webView = WebViewController()
+        webView.url = url
+        view.navigationController?.pushViewController(webView, animated: true)
     }
 }

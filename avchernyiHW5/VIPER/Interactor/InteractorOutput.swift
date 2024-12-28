@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+// MARK: - InteractorOutput
 protocol InteractorOutput: AnyObject {
+    // MARK: - Functions
     func presentNews()
 }

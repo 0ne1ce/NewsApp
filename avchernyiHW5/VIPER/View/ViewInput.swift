@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+// MARK: - ViewInput
 protocol ViewInput: AnyObject {
+    // MARK: - Functions
     func presentNews()
 }

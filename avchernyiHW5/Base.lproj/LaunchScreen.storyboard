@@ -15,16 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chromokopia-is-just-a-cover-up-for-tyler-coming-out-as-a-v0-7ua3c9gr37vd1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O4s-xF-Bea">
-                                <rect key="frame" x="-474" y="-159" width="1414.3333333333333" height="1170"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chromokopia-is-just-a-cover-up-for-tyler-coming-out-as-a-v0-7ua3c9gr37vd1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O4s-xF-Bea">
+                                <rect key="frame" x="-400" y="-159" width="1303.6666666666667" height="1170"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="O4s-xF-Bea" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XRA-ao-dxC"/>
-                            <constraint firstItem="O4s-xF-Bea" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uLR-kt-HBB"/>
+                            <constraint firstAttribute="trailing" secondItem="O4s-xF-Bea" secondAttribute="trailing" constant="-510.67000000000002" id="ORo-Y8-xuf"/>
+                            <constraint firstItem="O4s-xF-Bea" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-400" id="YrS-qq-lRM"/>
+                            <constraint firstItem="O4s-xF-Bea" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="r6Z-3i-qcn"/>
                         </constraints>
                     </view>
                 </viewController>

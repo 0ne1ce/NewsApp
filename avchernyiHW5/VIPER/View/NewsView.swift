@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - NewsView
 final class NewsView: UIView {
     // MARK: - Properties
     let tableView: UITableView = UITableView()
@@ -22,7 +23,7 @@ final class NewsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Functions
+    // MARK: - Private functions
     private func configureUI() {
         configureTableView()
     }
@@ -32,9 +33,9 @@ final class NewsView: UIView {
         tableView.backgroundColor = .lightGray
         tableView.separatorStyle = .none
         
-        tableView.pinHorizontal(to: self, Constants.NewsView.offsetH)
-        tableView.pinTop(to: self.safeAreaLayoutGuide.topAnchor, Constants.NewsView.offsetV)
-        tableView.pinBottom(to: self.safeAreaLayoutGuide.bottomAnchor, -Constants.NewsView.offsetV)
+        tableView.pinHorizontal(to: self)
+        tableView.pinTop(to: self.topAnchor)
+        tableView.pinBottom(to: self.bottomAnchor)
         
         tableView.layer.cornerRadius = Constants.NewsView.radius
     }

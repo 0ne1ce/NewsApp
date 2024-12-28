@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - Assembly
 final class Assembly {
     // MARK: - Functions
     class func configuredModule() -> UIViewController {
@@ -15,6 +16,7 @@ final class Assembly {
         let interactor = Interactor()
         let presenter = Presenter()
         let router = Router()
+        let worker = ArticleWorker()
         
         
         view.output = presenter
@@ -24,6 +26,7 @@ final class Assembly {
         presenter.interactor = interactor
         
         interactor.output = presenter
+        interactor.worker = worker
         
         router.view = view
         

@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+// MARK: - NewsDataStore
 protocol NewsDataStore: AnyObject {
+    // MARK: - Properties
     var articles: [ArticleModel] { get set }
 }

@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
+// MARK: - NewsBuisnessLogic
 protocol NewsBuisnessLogic: AnyObject {
+    // MARK: - Functions
     func loadFreshNews()
     func loadMoreNews()
+    func getArticleURL(indexPath: IndexPath) -> URL?
+    func getArticleCount() -> Int
+    func getArticleElem(row: Int) -> ArticleModel
 }
